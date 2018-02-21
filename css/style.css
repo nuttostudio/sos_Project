@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+body{
+	font-family: 'Kanit', sans-serif;
+	background-color: #15436a;
+	color: #fff;
+}
+.bg-blue{
+	background-color: #fff;
+	color: #000;
+}
+.bg-blue1{
+	background-color: #15436a;
+	color: #fff;
+}
+.bg-white{
+	box-shadow: 0px 2px 4px #f2f2f2;
+	background-color: #fff;
+	color: #000;
+}
+.bg-white1{
+	box-shadow: 0px -1px 4px #f2f2f2;
+	background-color: #fff;
+	color: #000;
+}
+      /* Optional: Makes the sample page fill the window. */
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+		text-align: center;
+      }
+
+      #map {
+        height: 500px;
+        width: 100%;
+        border-radius: 25px;
+        color: #000;
+      }
