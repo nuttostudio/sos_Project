@@ -13,7 +13,17 @@
 <div class="container-fluid mt-3">
 <button type="button" class="btn btn-danger mt-2 mb-2" data-toggle="modal" data-target="#myModal" style="width: 100%;font-size: 20px;"><b><i class="fa fa-bullseye" style="color: #fff;"></i> แจ้งอุบัติเหตุ หรือ โทร.1669</b></button>
   <div id="map"></div>
+  <input type="hidden" id="idx" name="idx">
+  <input type="hidden" id="idy" name="idy">
+  <?php 
+  session_start();
+  	$dd = "7.0086471999999995";
+  ?>
     <script>
+    	var jsonObj = [{"location":"วัดลาดปลาเค้า", "lat": "<?php echo $dd ?>", "lng": "150.4746879"},
+			  {"location":"หมู่บ้านอารียา", "lat": "13.847766", "lng": "100.605768"},
+			  {"location":"สปีดเวย์", "lat": "13.845235", "lng": "100.602711"},
+			  {"location":"สเต็ก ลุงหนวด", "lat": "13.862970", "lng": "100.613834"}]
       function initMap() {
 			var mapOptions = {
 			  center: {lat: 7.0086471999999995, lng: 100.4746879},
@@ -31,7 +41,8 @@
 				  lat: position.coords.latitude,
 				  lng: position.coords.longitude
 				};
-
+				var x = $('#idx').val(position.coords.latitude);
+				var xy = $('#idy').val(position.coords.longitude);
 				infoWindow.setPosition(pos);
 				infoWindow.setContent('Location found. lat: ' + position.coords.latitude + ', lng: ' + position.coords.longitude + ' ');
 				infoWindow.open(maps);
@@ -39,6 +50,28 @@
 			  }, function() {
 				handleLocationError(true, infoWindow, map.getCenter());
 			  });
+
+			$_SESSION['areax'] = position.coords.latitude;
+			  $.each(jsonObj, function(i, item){
+
+
+				marker = new google.maps.Marker({
+				   position: new google.maps.LatLng(item.lat, item.lng),
+				   map: maps,
+				   title: item.location,
+				   icon: 'img/at.png',
+				});
+
+			  info = new google.maps.InfoWindow();
+
+			  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+				return function() {
+				  info.setContent(item.location);
+				  info.open(maps, marker);
+				}
+			  })(marker, i));
+
+			});
 			} else {
 			  // Browser doesn't support Geolocation
 			  handleLocationError(false, infoWindow, map.getCenter());
