@@ -11,8 +11,17 @@
 			}
  </script>
 <div class="container-fluid mt-3">
-<button type="button" class="btn btn-danger mt-2 mb-2" data-toggle="modal" data-target="#myModal" style="width: 100%;font-size: 20px;"><b><i class="fa fa-bullseye" style="color: #fff;"></i> แจ้งอุบัติเหตุ หรือ โทร.1669</b></button>
-  <div id="map"></div>
+	<div class="row">
+		<div class="col-8">
+			<div id="map"></div>
+		</div>
+		<div class="col-4 text-center">
+			<div style="width: 300px;height: 300px;" class="mt-5 ml-5">
+				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" style="width: 100%;font-size: 40px;height: 100%;border-radius: 50%;"><b>แจ้งอุบัติเหตุ<br>โทร.1669</b></button>
+			</div>
+		</div>
+	</div>
+  
   <input type="hidden" id="idx" name="idx">
   <input type="hidden" id="idy" name="idy">
   <?php 
@@ -118,7 +127,7 @@
     	<div class="col-5">
     		<div class="card mt-3">
 		    	<div class="card-header" style="color: #000;">
-		    		<i class="fa fa-history"></i> ธรรมเนียบ
+		    		<i class="fa fa-trophy"></i> ธรรมเนียบ
 		    		<table class="table table-hover">
 		    			<thead>
 		    				<tr>
