@@ -12,6 +12,7 @@
 	</head>
 	<body>
 		<?php
+			require 'db_conn.php';
 			include 'menu.php';
 			include 'home.php';
 		?>
