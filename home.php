@@ -35,7 +35,7 @@
 				infoWindow.setPosition(pos);
 				infoWindow.setContent('Location found. lat: ' + position.coords.latitude + ', lng: ' + position.coords.longitude + ' ');
 				infoWindow.open(maps);
-				map.setCenter(pos);
+				maps.setCenter(pos);
 			  }, function() {
 				handleLocationError(true, infoWindow, map.getCenter());
 			  });
