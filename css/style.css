@@ -46,4 +46,6 @@ body{
 }
 .dropdown-menu{
 	z-index: 1021;
+	margin-right: 20px;
+	margin-top: 9px;
 }

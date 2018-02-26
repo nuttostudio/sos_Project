@@ -1,13 +1,14 @@
 <div class="container-fluid bg-blue1">
   <div class="col-12 text-right">
     <div class="btn-group mt-3 mb-2">
-      <button type="button" class="btn btn-primary"><?php echo $member; ?></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+      <a><?php echo $member; ?></a>
+      <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
         <span class="caret"></span>
-      </button>
+      </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Tablet</a>
-        <a class="dropdown-item" href="#">Smartphone</a>
+        <img src="img/sort.png" style="position: absolute;margin-top: -20px;margin-left: 133px;">
+        <a class="dropdown-item" href="#">แก้ไขโปรไฟล์</a>
+        <a class="dropdown-item" href="#">ออกจากระบบ</a>
       </div>
     </div>
   </div>
