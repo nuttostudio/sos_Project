@@ -25,7 +25,6 @@
   <input type="hidden" id="idx" name="idx">
   <input type="hidden" id="idy" name="idy">
   <?php 
-  session_start();
   	$dd = "7.0086471999999995";
   ?>
     <script>

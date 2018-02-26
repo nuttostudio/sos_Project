@@ -21,10 +21,9 @@
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '162154804584616',
-      cookie     : true,  // enable cookies to allow the server to access 
-                          // the session
-      xfbml      : true,  // parse social plugins on this page
-      version    : 'v2.12' // use graph api version 2.8
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.12'
     });
 
     FB.getLoginStatus(function(response) {
@@ -48,6 +47,5 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      window.location = "./check_login.php?name="+response.name;
     });
   }

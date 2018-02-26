@@ -9,12 +9,39 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/facebook.js"></script>
+		<?php
+			session_start();
+			if (isset($_SESSION['fname'])) {
+				require 'db_conn.php';
+				$name = $_SESSION['fname'];
+				$member_select = "SELECT*FROM member WHERE f_name='$name'";
+				$member_query = mysqli_query($conn,$member_select);
+				$member_select = mysqli_fetch_array($member_query);
+				if ($member_select) {
+					?>
+					<script src="js/facebook_login.js"></script>
+					<?php
+					$member = $member_select['f_name'];
+				}else{
+				?>
+					<script src="js/facebook.js"></script>
+				<?php
+				}
+			}else{
+				?>
+					<script src="js/facebook.js"></script>
+				<?php
+			}
+		?>
+		
 	</head>
 	<body>
 		<?php
-			require 'db_conn.php';
-			include 'menu.php';
+			if (isset($member)) {
+				include 'menu_member.php';
+			}else{
+				include 'menu.php';
+			}
 			include 'home.php';
 		?>
 		<!-- The Modal -->
