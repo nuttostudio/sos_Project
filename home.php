@@ -17,7 +17,7 @@
 		</div>
 		<div class="col-4 text-center">
 			<div style="width: 300px;height: 300px;" class="mt-5 ml-5">
-				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" style="width: 100%;font-size: 40px;height: 100%;border-radius: 50%;"><b>แจ้งอุบัติเหตุ<br>โทร.1669</b></button>
+				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" style="width: 100%;font-size: 40px;height: 100%;border-radius: 50%;border: 5px solid #fff;"><b>แจ้งอุบัติเหตุ<br>โทร.1669</b></button>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <div class="container-fluid bg-blue1">
   <div class="col-12 text-right">
-    <button type="button" class="btn btn-primary mt-2 mb-2"><b><i class="fa fa-facebook-square" style="color: #fff;"></i> LOGIN</b></button>
+    <button type="button" onclick="FB.login()" class="btn btn-primary mt-2 mb-2" scope="public_profile,email" onlogin="checkLoginState();"><b><i class="fa fa-facebook-square" style="color: #fff;"></i> LOGIN</b></button>
     <button type="button" class="btn btn-danger mt-2 mb-2"><b><i class="fa fa-google-plus" style="color: #fff;"></i> LOGIN</b></button>
   </div>
 </div>
@@ -22,3 +22,5 @@
     </ul>
   </div> 
 </nav>
+<div id="status">
+</div>
