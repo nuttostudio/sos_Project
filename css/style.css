@@ -36,11 +36,11 @@ body{
         border-radius: 25px;
         color: #000;
       }
-.btn-primary{
+.btn-primary1{
 	background: #15436a;
 	border: 1px solid #15436a;
 }
-.btn-primary:hover{
+.btn-primary1:hover{
 	background: #113555;
 	border: 1px solid #113555;
 }

@@ -8,7 +8,7 @@
       <div class="dropdown-menu">
         <img src="img/sort.png" style="position: absolute;margin-top: -20px;margin-left: 133px;">
         <a class="dropdown-item" href="#">แก้ไขโปรไฟล์</a>
-        <a class="dropdown-item" href="#">ออกจากระบบ</a>
+        <a class="dropdown-item" onclick="FB.logout()" href="logout.php" >ออกจากระบบ</a>
       </div>
     </div>
   </div>

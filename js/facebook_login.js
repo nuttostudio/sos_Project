@@ -7,8 +7,7 @@
       // Logged into your app and Facebook.
       testAPI();
     } else {
-      // The person is not logged into your app or we are unable to tell.
-      document.getElementById('status').innerHTML = '';
+      window.location="logout.php";
     }
   }
 
@@ -49,3 +48,6 @@
       console.log('Successful login for: ' + response.name);
     });
   }
+  FB.logout(function(response) {
+     window.location="logout.php";
+  });
