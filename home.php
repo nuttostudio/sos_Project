@@ -15,8 +15,8 @@
 		<div class="col-8">
 			<div id="map"></div>
 		</div>
-		<div class="col-4 text-center">
-			<div style="width: 300px;height: 300px;" class="mt-5 ml-5">
+		<div class="col-4" align="center">
+			<div style="width: 300px;height: 300px;" class="mt-5">
 				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" style="width: 100%;font-size: 40px;height: 100%;border-radius: 50%;border: 5px solid #fff;"><b>แจ้งอุบัติเหตุ<br>โทร.1669</b></button>
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 				var xy = $('#idy').val(position.coords.longitude);
 					var mapOptions = {
 					  center: {lat: 13.847860, lng: 100.604274},
-					  zoom: 18,
+					  zoom: 16,
 					}
 						
 					var maps = new google.maps.Map(document.getElementById("map"),mapOptions);
@@ -64,16 +64,16 @@
 					});
 
 					var marker2 = new google.maps.Marker({
-					   position: new google.maps.LatLng(13.847077, 100.606973),
+					   position: new google.maps.LatLng(7.0128318, 100.606973),
 					   map: maps,
 					   title: 'หมู่บ้านอารียา',
-					   icon: 'img/at.png',
+					   icon: 'img/map1.gif',
 					});
 
 
 				infoWindow.setPosition(pos);
-				infoWindow.setContent('Location found. lat: ' + position.coords.latitude + ', lng: ' + position.coords.longitude + ' ');
-				infoWindow.open(maps);
+				infoWindow.setContent('');
+				// infoWindow.open(maps);
 				maps.setCenter(pos);
 			  }, function() {
 				handleLocationError(true, infoWindow, map.getCenter());
