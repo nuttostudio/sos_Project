@@ -10,17 +10,19 @@
 		header("location:./");
 	}else{
 		$_SESSION['fname'] = "";
-		$sql = "CREATE TABLE member (
-		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-		f_name VARCHAR(30),
-		f_email VARCHAR(30),
-		f_tel VARCHAR(50),
-		status VARCHAR(50),
-		s_time TIMESTAMP
-		)";
-		$conn->query($sql);
-		$member_insert = "INSERT INTO member (f_name) VALUES ('$name')";
-		$conn->query($member_insert);
+		if (isset($name)) {
+			$sql = "CREATE TABLE member (
+			id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+			f_name VARCHAR(30),
+			f_email VARCHAR(30),
+			f_tel VARCHAR(50),
+			status VARCHAR(50),
+			s_time TIMESTAMP
+			)";
+			$conn->query($sql);
+			$member_insert = "INSERT INTO member (f_name) VALUES ('$name')";
+			$conn->query($member_insert);
+		}
 		header("location:./");
 	}
 ?>

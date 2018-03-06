@@ -9,6 +9,7 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		
 		<?php
 			session_start();
 			if (isset($_SESSION['fname'])) {
@@ -45,17 +46,15 @@
 			include 'home.php';
 		?>
 		<!-- The Modal -->
-		  <div class="modal fade" id="myModal" style="color: #000;">
+		 <!--  <div class="modal fade" id="myModal" style="color: #000;">
 		    <div class="modal-dialog">
 		      <div class="modal-content">
 		      
 		        
-		        <!-- Modal body -->
 		        <div class="modal-body">
 		        	เข้าสู่ระบบก่อนแจ้งเหตุ
 		        </div>
 		        
-		        <!-- Modal footer -->
 		        <div class="modal-footer">
 		          <table width="100%">
 		        		<tr>
@@ -67,6 +66,27 @@
 		        			</td>
 		        		</tr>
 		        	</table>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div> -->
+		  <div class="modal fade" id="myModal" style="color: #000;">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		      
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		        	<div class="row">
+		        		<div class="col-12">
+		        			<h1>แจ้งอุบัติเหตุ</h1>
+		        			<hr>
+		        		</div>
+		          		<div class="col-12">
+		          			<input type="file" name="text" class="form-control">
+		          		</div>
+		          	</div>
 		        </div>
 		        
 		      </div>
